@@ -35,10 +35,10 @@ public class Paciente {
     }
 
     public void setCpf(String cpf) {
-        this.cpf = cpf;
         if (cpf == null || !cpf.matches("\\d{11}")) {
             throw new IllegalArgumentException("CPF inválido. Deve conter 11 dígitos numéricos.");
         }
+        this.cpf = cpf;
     }
 
     public String getDataNascimento() {
